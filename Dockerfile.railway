@@ -16,4 +16,4 @@ RUN pnpm build:docker
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "node openclaw.mjs gateway --allow-unconfigured --port=${PORT:-3000} --bind=0.0.0.0"]
+CMD ["sh", "-c", "node openclaw.mjs gateway --allow-unconfigured --port=${PORT:-3000} --bind=lan"]
