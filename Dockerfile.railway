@@ -16,4 +16,4 @@ RUN pnpm build:docker
 
 EXPOSE 3000
 
-CMD ["node", "openclaw.mjs"]
+CMD ["node", "openclaw.mjs", "gateway"]
