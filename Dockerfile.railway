@@ -1,12 +1,8 @@
 FROM node:22
-
 WORKDIR /app
-
-COPY . .
-
-RUN npm install -g pnpm
-RUN pnpm install
-
+COPY backend/package.json ./
+RUN npm install
+COPY backend/ ./
+COPY frontend/ ./frontend/
 EXPOSE 3000
-
-CMD ["pnpm", "start"]
+CMD ["node", "server.js"]
